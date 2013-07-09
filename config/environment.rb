@@ -19,7 +19,16 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
-require 'bcrypt'
+require 'twitter'
+
+
+#configure twitter client
+Twitter.configure do |config|
+  config.consumer_key = "6qwkpgTsNl5hz6wcb7w"
+  config.consumer_secret = "SlE5ZMltbIZV0akkveLlamXT39QIF3Srkag0FSyNI"
+  config.oauth_token = "630392542-L47hnULWUU5PkXSQGbzw8RZAmmrAq2w0NU5sUxLI"
+  config.oauth_token_secret = "7wu4ktMwXp3JKFu5b4DjeQbaKG0NY1IMiOxXA8to"
+end
 
 
 # Some helper constants for path-centric logic
